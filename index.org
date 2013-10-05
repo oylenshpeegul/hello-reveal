@@ -1,0 +1,89 @@
+#+Title: Hello, World!
+#+Author: oylenshpeegul
+#+Email: oylenshpeegul@gmail.com
+#+OPTIONS: num:nil toc:nil
+#+REVEAL_THEME: serif
+#+REVEAL_TRANS: linear
+
+* Hello, World!
+
+A sample org-reveal presentation.
+- with bullets
+- (always a mistake?)
+
+* Hello, Perl!
+
+#+BEGIN_SRC perl
+#!/usr/bin/env perl
+
+use v5.18;
+use warnings;
+
+my $name = shift // 'World';
+
+say "Hello, $name!";
+#+END_SRC
+
+* Hello, Go!
+
+Go actually has a built-in println
+
+#+BEGIN_SRC go
+package main
+
+func main() {
+	println("Hello, World!")
+}
+#+END_SRC
+
+** Hello, Go with fmt
+- But it's more idiomatic to import fmt
+- Also, fmt.Println is more flexible than println
+
+#+BEGIN_SRC go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, World!")
+}
+#+END_SRC
+
+* Hello, Elixir!
+
+#+BEGIN_SRC elixir
+#!/usr/bin/env elixir
+
+greet = fn s -> IO.puts "Hello, #{s}!" end
+
+if length(System.argv) == 0 do
+  greet.("World")
+else 
+  Enum.each System.argv, greet
+end
+#+END_SRC
+
+* Links
+- simple link: [[https://github.com/hakimel/reveal.js]]
+- linked text: [[https://github.com/hakimel/reveal.js][Reveal.js]]
+
+* This slide is RED!
+:PROPERTIES: 
+:reveal_background: #FF0000 
+:END: 
+
+* This slide has a background image
+:PROPERTIES: 
+:reveal_background: zev.jpg
+:END:
+
+* This slide rolls in text line by line
+#+ATTR_REVEAL: :frag roll-in
+- show bullet-points
+- one by one
+
+* Highlight the last bulletpoint in red
+- show all bullet-points straight away
+#+ATTR_REVEAL: :frag highlight-red
+- then highlight the most important one
