@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>(Hello, World!)</title>
+<meta name="author" content="(oylenshpeegul)"/>
+<link rel="stylesheet" href="./reveal.js/css/reveal.min.css"/>
+<link rel="stylesheet" href="./reveal.js/css/theme/serif.css" id="theme"/>
+
+<link rel="stylesheet" href="./reveal.js/css/print/pdf.css" type="text/css" media="print"/>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section>
+<h1>Hello, World!</h1>
+<h2>oylenshpeegul</h2>
+<h2><a href="mailto:oylenshpeegul@gmail.com">oylenshpeegul@gmail.com</a></h2>
+<h2></h2></section>
+
+<section>
+<section id="sec-1" >
+
+<h2>Hello, World!</h2>
+<p>
+A sample org-reveal presentation.
+</p>
+<ul class="org-ul">
+<li>with bullets
+</li>
+<li>(always a mistake?)
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-2" >
+
+<h2>Hello, Perl!</h2>
+<div class="org-src-container">
+
+<pre class="src src-perl"><span style="color: #b22222;">#</span><span style="color: #b22222;">!/usr/bin/env perl</span>
+
+<span style="color: #a020f0;">use</span> v5.18;
+<span style="color: #a020f0;">use</span> <span style="color: #0000ff;">warnings</span>;
+
+<span style="color: #a020f0;">my</span> <span style="color: #a0522d;">$name</span> = <span style="color: #66cd00;">shift</span> // <span style="color: #8b2252;">'World'</span>;
+
+<span style="color: #66cd00;">say</span> <span style="color: #8b2252;">"Hello, $name!"</span>;
+</pre>
+</div>
+</section>
+</section>
+<section>
+<section id="sec-3" >
+
+<h2>Hello, Go!</h2>
+<p>
+Go actually has a built-in println
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-go"><span style="color: #a020f0;">package</span> main
+
+<span style="color: #a020f0;">func</span> <span style="color: #0000ff;">main</span>() {
+    <span style="color: #483d8b;">println</span>(<span style="color: #8b2252;">"Hello, World!"</span>)
+}
+</pre>
+</div>
+
+</section>
+<section id="sec-3-1" >
+
+<h3>Hello, Go with fmt</h3>
+<ul class="org-ul">
+<li>But it's more idiomatic to import fmt
+</li>
+<li>Also, fmt.Println is more flexible than println
+</li>
+</ul>
+
+<div class="org-src-container">
+
+<pre class="src src-go"><span style="color: #a020f0;">package</span> main
+
+<span style="color: #a020f0;">import</span> <span style="color: #8b2252;">"fmt"</span>
+
+<span style="color: #a020f0;">func</span> <span style="color: #0000ff;">main</span>() {
+    fmt.<span style="color: #0000ff;">Println</span>(<span style="color: #8b2252;">"Hello, World!"</span>)
+}
+</pre>
+</div>
+</section>
+</section>
+<section>
+<section id="sec-4" >
+
+<h2>Hello, Elixir!</h2>
+<div class="org-src-container">
+
+<pre class="src src-elixir"><span style="color: #b22222;">#!/usr/bin/env elixir</span>
+
+<span style="color: #a0522d;">greet</span> = <span style="color: #a020f0;">fn</span> s -&gt; <span style="color: #228b22;">IO</span>.puts <span style="color: #8b2252;">"Hello, #{s}!"</span> <span style="color: #a020f0;">end</span>
+
+<span style="color: #a020f0;">if</span> length(<span style="color: #228b22;">System</span>.argv) == 0 <span style="color: #a020f0;">do</span>
+  greet.(<span style="color: #8b2252;">"World"</span>)
+<span style="color: #a020f0;">else</span> 
+  <span style="color: #228b22;">Enum</span>.each <span style="color: #228b22;">System</span>.argv, greet
+<span style="color: #a020f0;">end</span>
+</pre>
+</div>
+</section>
+</section>
+<section>
+<section id="sec-5" >
+
+<h2>Links</h2>
+<ul class="org-ul">
+<li>simple link: <a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a>
+</li>
+<li>linked text: <a href="https://github.com/hakimel/reveal.js">Reveal.js</a>
+</li>
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.min.js"></script>
+<script>
+
+        		// Full list of configuration options available here:
+        		// https://github.com/hakimel/reveal.js#configuration
+        		Reveal.initialize({
+        			controls: true,
+        			progress: true,
+        			history: true,
+        			center: true,
+        			rollingLinks: true,
+        			keyboard: true,
+        			overview: true,
+        			 // slide width
+        			 // slide height
+        			 // slide margin
+        			 // slide minimum scaling factor
+        			 // slide maximum scaling factor
+
+
+        			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        			transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        			transitionSpeed: 'default',
+
+        			// Optional libraries used to extend on reveal.js
+        			dependencies: [
+        				{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        				{ src: './reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        				{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        				{ src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        				{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        				{ src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        				// { src: './reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+        				// { src: './reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        			]
+        		});
+</script>
+</body>
+</html>
